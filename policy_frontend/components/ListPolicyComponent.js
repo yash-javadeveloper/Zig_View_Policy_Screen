@@ -24,12 +24,6 @@ const ListPolicyComponent = () => {
 
    
 
-    function addNewPolicy() {
-        navigate('/add-policy')
-    }
-
-   
-
     return (
         <div className = "container">
             <br /><br />
