@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import {useNavigate, useParams } from 'react-router-dom';
-import {createPolicy, getPolicyById} from '../PolicyService';
+import {getPolicyById} from '../PolicyService';
 
 const PolicyComponent = () => {
 
@@ -18,26 +18,7 @@ const PolicyComponent = () => {
         const policy = {policyType, policyName, policyTo};
 
         console.log(policy);
-        if(id){
-            updateEmployee(id, policy).then((response) => {
-                navigate('/policies')
-            }).catch(error => {
-                console.log(error)
-            })
-
-        }else{
-            createPolicy(policy).then((response) =>{
-
-                console.log(response.data)
-    
-                navigate('/policies');
-    
-            }).catch(error => {
-                console.log(error)
-            })
-        }
-        
-    }
+     
 
     useEffect(() => {
 
@@ -53,15 +34,6 @@ const PolicyComponent = () => {
         }
 
     }, [id])
-
-    const pageTitle = () => {
-
-        if(id){
-            return <h2 className = "text-center">Update Employee</h2>
-        }else{
-            return <h2 className = "text-center">Add Policy</h2>
-        }
-    }
 
     return (
         <div>
