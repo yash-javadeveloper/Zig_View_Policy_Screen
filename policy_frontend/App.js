@@ -14,7 +14,6 @@ function App() {
           <Routes>
               <Route path = "/" element = { <ListPolicyComponent /> }></Route>
               <Route path = "/policies" element = { <ListPolicyComponent /> }></Route>
-              <Route path = "/add-policy" element = { <PolicyComponent />} ></Route>
             </Routes>
         </div>
         <FooterComponent />
