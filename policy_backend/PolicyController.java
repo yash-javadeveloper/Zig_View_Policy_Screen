@@ -27,13 +27,6 @@ public class PolicyController {
         return ResponseEntity.ok(policies);
     }
 
-    // build create employee REST API
-    @PostMapping
-    public ResponseEntity<PolicyDto> createPolicy(@RequestBody PolicyDto policy) {
-        PolicyDto policyDto = policyService.createPolicy(policy);
-        return new ResponseEntity<>(policyDto, HttpStatus.CREATED);
-    }
-
     // build get employee by id REST API
     @GetMapping("{id}")
     public ResponseEntity<PolicyDto> getPolicyById(@PathVariable("id") Long policyId){
