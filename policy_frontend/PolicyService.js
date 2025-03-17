@@ -13,11 +13,3 @@ export const createPolicy = (policy) => {
 export const getPolicyById = (policyId) => {
     return axios.get(POLICY_BASE_REST_API_URL + '/' + policyId);
 }
-
-export const updateEmployee = (employeeId, employee) => {
-    return axios.put(POLICY_BASE_REST_API_URL + '/' +employeeId, employee);
-}
-
-export const deleteEmployee = (employeeId) => {
-    return axios.delete(POLICY_BASE_REST_API_URL + '/' + employeeId);
-}
