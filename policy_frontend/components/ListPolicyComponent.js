@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import {listPolicy, deleteEmployee} from '../PolicyService'
+import {listPolicy} from '../PolicyService'
 
 const ListPolicyComponent = () => {
 
@@ -22,23 +22,13 @@ const ListPolicyComponent = () => {
         })
     }
 
-    const removeEmployee = (employeeId) => {
-       deleteEmployee(employeeId).then((response) =>{
-        getAllPolicy();
-
-       }).catch(error =>{
-           console.log(error);
-       })
-        
-    }
+   
 
     function addNewPolicy() {
         navigate('/add-policy')
     }
 
-    const updateEmployee = (id) => {
-        navigate(`/edit-policy/${id}`)
-    }
+   
 
     return (
         <div className = "container">
