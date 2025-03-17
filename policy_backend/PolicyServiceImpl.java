@@ -28,12 +28,6 @@ public class PolicyServiceImpl implements PolicyService {
                 .collect(Collectors.toList());
         return policyDtos;
     }
-    @Override
-    public PolicyDto createPolicy(PolicyDto policyDto) {
-        Policy policy = PolicyMapper.mapToPolicy(policyDto);
-        Policy savedPolicy = policyRepository.save(policy);
-        return PolicyMapper.mapToPolicyDto(savedPolicy);
-    }
 
     @Override
     public PolicyDto getPolicyById(Long policyId) {
