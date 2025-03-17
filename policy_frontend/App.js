@@ -15,7 +15,6 @@ function App() {
               <Route path = "/" element = { <ListPolicyComponent /> }></Route>
               <Route path = "/policies" element = { <ListPolicyComponent /> }></Route>
               <Route path = "/add-policy" element = { <PolicyComponent />} ></Route>
-              <Route path = "/edit-employee/:id" element = { <PolicyComponent />}></Route>
             </Routes>
         </div>
         <FooterComponent />
