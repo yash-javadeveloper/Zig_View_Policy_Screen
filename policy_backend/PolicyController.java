@@ -26,4 +26,9 @@ public class PolicyController {
         List<PolicyDto> policies = policyService.getAllPolicy();
         return ResponseEntity.ok(policies);
     }
+    @PostMapping
+    public ResponseEntity<PolicyDto> createPolicy(@RequestBody PolicyDto policy) {
+        PolicyDto policyDto = policyService.createPolicy(policy);
+        return new ResponseEntity<>(policyDto, HttpStatus.CREATED);
+    }
 }
