@@ -28,13 +28,4 @@ public class PolicyServiceImpl implements PolicyService {
                 .collect(Collectors.toList());
         return policyDtos;
     }
-
-    @Override
-    public PolicyDto getPolicyById(Long policyId) {
-        Policy policy = policyRepository.findById(policyId)
-                .orElseThrow(() ->
-                        new ResourceNotFoundException("Policy not exist with id: " + policyId));
-        PolicyDto policyDto = PolicyMapper.mapToPolicyDto(policy);
-        return policyDto;
-    }
 }
