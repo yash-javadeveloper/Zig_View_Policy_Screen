@@ -5,6 +5,4 @@ import java.util.List;
 
 public interface PolicyService {
     List<PolicyDto> getAllPolicy();
-    
-    PolicyDto getPolicyById(Long policyId);
 }
