@@ -26,11 +26,4 @@ public class PolicyController {
         List<PolicyDto> policies = policyService.getAllPolicy();
         return ResponseEntity.ok(policies);
     }
-
-    // build get employee by id REST API
-    @GetMapping("{id}")
-    public ResponseEntity<PolicyDto> getPolicyById(@PathVariable("id") Long policyId){
-        PolicyDto policy = policyService.getPolicyById(policyId);
-        return ResponseEntity.ok(policy);
-    }
 }
