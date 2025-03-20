@@ -72,18 +72,21 @@ const PolicyComponent = () => {
                                     </input>
                                 </div>
                                 
-                                <div className = "form-group mb-2">
-                                    <label className = "form-label"> Policy To :</label>
-                                    <input
-                                        type = "text"
-                                        placeholder = "Enter Policy to"
-                                        name = "lastName"
-                                        className = "form-control"
-                                        value = {policyTo}
-                                        onChange = {(e) => setPolicyTo(e.target.value)}
-                                    >
-                                    </input>
-                                </div>
+                    <div className="form-group mb-2">
+                       <label className="form-label">Policy To:</label>
+                           <select
+                           name="policyTo"
+                           className="form-control"
+                            value={policyTo}
+                            onChange={(e) => setPolicyTo(e.target.value)}
+                           >
+                                <option value="" disabled selected>
+                                    Select Policy To
+                                </option>
+                           <option value="self">Self</option>
+                           <option value="dependent">Dependent</option>
+                         </select>
+                    </div>
 
                                 <button className = "btn btn-success" onClick = {(e) => saveOrUpdatePolicy(e)} >Submit </button>
                                 {/* <Link to="/policies" className="btn btn-danger"> Cancel </Link> */}
