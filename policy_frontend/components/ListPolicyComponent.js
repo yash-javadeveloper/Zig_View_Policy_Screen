@@ -22,6 +22,25 @@ const ListPolicyComponent = () => {
         })
     }
 
+     const removeEmployee = (employeeId) => {
+       deleteEmployee(employeeId).then((response) =>{
+        getAllEmployees();
+
+       }).catch(error =>{
+           console.log(error);
+       })
+        
+    }
+
+     function addNewEmployee() {
+        navigate('/add-employee')
+    }
+
+    const updateEmployee = (id) => {
+        navigate(`/edit-employee/${id}`)
+    }
+
+
    
 
     return (
